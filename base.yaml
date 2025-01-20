@@ -4,10 +4,14 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
+tun:
+  enable: true
 dns:
  enable: true
  listen: :53
  enhanced-mode: redir-host
+ hosts:
+  '*.dev.nz': 127.0.0.1
  nameserver:
    - 114.114.114.114
    - 223.5.5.5
